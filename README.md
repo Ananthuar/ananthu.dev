@@ -1,54 +1,55 @@
-# Ananthu A R - Premium Personal Portfolio
+# 🌐 Personal Portfolio
 
-A high-end, Apple-style personal portfolio built with React, Vite, Tailwind CSS, and Framer Motion. This project emphasizes extreme minimalism, smooth scroll animations, and premium typographic hierarchy.
-
-## 🚀 Tech Stack
-- **Framework**: React + Vite
-- **Styling**: Vanilla Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Typography**: Inter (Google Fonts)
+🔗 Live: https://ananthu-dev.vercel.app/
 
 ---
 
-## 💻 Local Development
+## 🚀 About
 
-To run this project locally, follow these steps:
-
-1. **Prerequisites**: Ensure you have Node.js (v18 or higher) and npm installed.
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Start the Development Server**:
-   ```bash
-   npm run dev
-   ```
-4. **Build for Production**:
-   ```bash
-   npm run build
-   ```
+This is my personal portfolio website built to showcase my projects, skills, and experience as a Computer Science Engineering student focused on AI/ML and application development.
 
 ---
 
-## 🌍 Vercel Deployment
+## ✨ Features
 
-This project is optimized for deployment on Vercel.
-
-**Option 1: Using the Vercel CLI (Recommended for fast deployment)**
-1. Install Vercel globally: `npm i -g vercel`
-2. Run `vercel` in the root of the project.
-3. Follow the CLI prompts to deploy.
-
-**Option 2: Deploying via GitHub Integration**
-1. Push this repository to GitHub/GitLab/Bitbucket.
-2. Go to your [Vercel Dashboard](https://vercel.com/dashboard) and click **Add New** -> **Project**.
-3. Import your Git repository.
-4. Vercel will automatically detect Vite and configure the build settings:
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-5. Click **Deploy**.
+- Modern UI with smooth animations
+- Fully responsive design
+- Project showcase with real-world applications
+- Clean and minimal user experience
 
 ---
 
-Enjoy your premium web experience!
+## 🛠 Tech Stack
+
+- React
+- Tailwind CSS
+- Framer Motion
+
+---
+
+## 📂 Featured Projects
+
+### 🔹 Crash Sense
+AI/ML-based crash prediction system for Linux.
+
+### 🔹 Mahanaim Gospel Team
+A live website for a christian church.
+
+### 🔹 Krishi Mithra
+Platform connecting farmers directly with consumers.
+
+### 🔹 ProofIt
+To-do app with photo verification for task completion.
+
+### 🔹 Care Net
+Charity platform connecting people in need with helpers.
+
+---
+
+## ⚙️ Run Locally
+
+```bash
+git clone https://github.com/Ananthuar/portfolio.git
+cd portfolio
+npm install
+npm run dev
