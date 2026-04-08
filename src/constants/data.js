@@ -17,10 +17,10 @@ export const PERSONAL_DATA = {
         email: "ananthuar03@gmail.com",
         github: "https://github.com/Ananthuar",
         linkedin: "https://linkedin.com/in/ananthuar03",
-        whatsapp: "https://wa.me/917025677058", // Replace XXXXXX with your actual number
+        whatsapp: "https://wa.me/917025677058",
     },
-    resume: "/_ananthu_ar_resume_.pdf", // Drop your resume PDF into public/resume.pdf
-    profilePhoto: "/profile.png", // Add your profile photo to public/profile.png
+    resume: "/_ananthu_ar_resume_.pdf",
+    profilePhoto: "/profile.png",
     education: [
         {
             degree: "B.Tech in Computer Science & Engineering",
