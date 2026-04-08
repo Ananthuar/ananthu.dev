@@ -17,9 +17,9 @@ export const PERSONAL_DATA = {
         email: "ananthuar03@gmail.com",
         github: "https://github.com/Ananthuar",
         linkedin: "https://linkedin.com/in/ananthuar03",
-        whatsapp: "https://wa.me/919895XXXXXX", // Replace XXXXXX with your actual number
+        whatsapp: "https://wa.me/917025677058", // Replace XXXXXX with your actual number
     },
-    resume: "/resume.pdf", // Drop your resume PDF into public/resume.pdf
+    resume: "/_ananthu_ar_resume_.pdf", // Drop your resume PDF into public/resume.pdf
     profilePhoto: "/profile.png", // Add your profile photo to public/profile.png
     education: [
         {
@@ -28,6 +28,13 @@ export const PERSONAL_DATA = {
             location: "Punnapra, Kerala",
             duration: "2022 – 2026",
             description: "Specialising in Artificial Intelligence and Machine Learning. Actively building real-world systems across robotics, mobile, and web engineering domains."
+        },
+        {
+            degree: "Diploma in Computer Engineering",
+            institution: "Government Polytechnic College Chelakkara",
+            location: "Chelakkara, Thrissur, Kerala",
+            duration: "2021 – 2024",
+            description: "Three-year polytechnic diploma covering core computer engineering fundamentals — programming, networking, and systems design."
         }
     ],
     recognition: [
@@ -64,7 +71,7 @@ export const PERSONAL_DATA = {
             color: "from-blue-500/20 to-cyan-500/0",
             border: "border-blue-500/20",
             image: "/crash_sense.png",
-            github: "https://github.com/Ananthuar/crash-sense",
+            github: "https://github.com/Ananthuar/CRASH-SENSE",
         },
         {
             title: "Mahanaim Gospel Team",
@@ -73,7 +80,7 @@ export const PERSONAL_DATA = {
             color: "from-fuchsia-500/20 to-purple-500/0",
             border: "border-fuchsia-500/20",
             image: "/mahanaim.png",
-            github: "https://github.com/Ananthuar/MahanaimGospelTeam",
+            github: "https://github.com/Ananthuar/MahanaimGospalTeam",
             liveUrl: "https://mahanaimgospelteamwebsite.web.app/"
         },
         {
@@ -93,7 +100,7 @@ export const PERSONAL_DATA = {
             border: "border-purple-500/20",
             image: "/proofit.png",
             type: "mobile",
-            github: "https://github.com/Ananthuar/proofit",
+            github: "https://github.com/Ananthuar/ProofIt",
         },
         {
             title: "Care Net",
@@ -103,7 +110,7 @@ export const PERSONAL_DATA = {
             border: "border-orange-500/20",
             image: "/care_net.png",
             type: "mobile",
-            github: "https://github.com/Ananthuar/care-net",
+            github: "https://github.com/Ananthuar/CareNet/",
         }
     ]
 };
