@@ -54,9 +54,16 @@ function ProjectCard({ project, index }) {
                     <span className="text-sm font-mono tracking-widest text-zinc-500 mb-6">
                         0{index + 1}
                     </span>
-                    <h4 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                        {project.title}
-                    </h4>
+                    <div className="flex items-center gap-4 mb-6">
+                        <h4 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+                            {project.title}
+                        </h4>
+                        {project.status && (
+                            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-zinc-300 border border-white/10 backdrop-blur-md">
+                                {project.status}
+                            </span>
+                        )}
+                    </div>
                     <p className="text-xl text-zinc-400 font-light mb-8 max-w-md leading-relaxed">
                         {project.subtitle}
                     </p>
@@ -76,20 +83,87 @@ function ProjectCard({ project, index }) {
                     </div>
                 </div>
 
-                {/* Abstract Visual representation instead of mockups/placeholders */}
+                {/* Visual Panel: Phone mockup for mobile, wide image for web, abstract for no image */}
                 <div className={cn(
-                    "hidden md:flex h-[300px] w-full rounded-2xl border bg-black/50 backdrop-blur-md items-center justify-center relative overflow-hidden transition-all duration-700 group-hover:scale-[1.02]",
+                    "hidden md:flex h-[340px] w-full rounded-2xl border bg-black/50 backdrop-blur-md items-center justify-center relative overflow-hidden transition-all duration-700 group-hover:scale-[1.02]",
                     project.border,
                     !isEven && "md:col-start-1 md:row-start-1"
                 )}>
+                    {/* Subtle background glow always present */}
                     <div className={cn(
-                        "absolute w-[200%] h-[200%] opacity-20 group-hover:opacity-40 transition-opacity duration-1000 animate-spin-slow",
+                        "absolute w-[200%] h-[200%] opacity-10 group-hover:opacity-20 transition-opacity duration-1000",
                         project.color,
                         "bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]"
                     )} />
-                    <div className="z-10 group-hover:scale-110 transition-transform duration-700 font-bold text-8xl text-white/10 select-none">
-                        {project.title.substring(0, 2).toUpperCase()}
-                    </div>
+
+                    {project.type === "mobile" ? (
+                        /* Phone mockup frame */
+                        <div className="relative z-10 flex items-end justify-center gap-4 h-full pb-2 pt-6">
+                            {/* Main centered phone */}
+                            <div className="relative h-[290px] w-[135px] rounded-[2rem] border-2 border-white/20 bg-zinc-900 shadow-2xl overflow-hidden flex-shrink-0 group-hover:scale-[1.03] transition-transform duration-700">
+                                {/* Top notch */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-b-xl z-20" />
+                                {/* Screen */}
+                                <div className="absolute inset-[3px] rounded-[1.6rem] overflow-hidden bg-zinc-950">
+                                    {project.image ? (
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity duration-700"
+                                            onError={(e) => {
+                                                e.target.style.display = 'none';
+                                                e.target.nextSibling.style.display = 'flex';
+                                            }}
+                                        />
+                                    ) : null}
+                                    <div className={cn("w-full h-full items-center justify-center", project.image ? "hidden" : "flex")}>
+                                        <span className="text-2xl font-bold text-white/10">{project.title.substring(0, 2).toUpperCase()}</span>
+                                    </div>
+                                </div>
+                                {/* Home indicator */}
+                                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-10 h-1 bg-white/30 rounded-full z-20" />
+                            </div>
+
+                            {/* Second phone, slightly behind and offset */}
+                            <div className="relative h-[250px] w-[115px] rounded-[1.8rem] border-2 border-white/10 bg-zinc-900/70 shadow-xl overflow-hidden flex-shrink-0 opacity-50 group-hover:opacity-75 transition-all duration-700 -translate-y-2">
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-4 bg-black rounded-b-xl z-20" />
+                                <div className="absolute inset-[3px] rounded-[1.4rem] overflow-hidden bg-zinc-950/80">
+                                    {project.image && (
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover object-center scale-110 blur-[1px]"
+                                            onError={(e) => { e.target.style.display = 'none'; }}
+                                        />
+                                    )}
+                                </div>
+                                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-white/20 rounded-full z-20" />
+                            </div>
+                        </div>
+                    ) : project.image ? (
+                        /* Wide landscape image for web/desktop apps */
+                        <div className="absolute inset-0 w-full h-full p-2 z-10">
+                            <div className="relative w-full h-full overflow-hidden rounded-xl bg-zinc-900 border border-white/5">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                        e.target.nextSibling.style.display = 'flex';
+                                    }}
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center hidden">
+                                    <span className="text-zinc-600 font-mono text-sm">Add image: {project.image}</span>
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        /* Abstract fallback */
+                        <div className="z-10 group-hover:scale-110 transition-transform duration-700 font-bold text-8xl text-white/10 select-none">
+                            {project.title.substring(0, 2).toUpperCase()}
+                        </div>
+                    )}
                 </div>
 
             </div>

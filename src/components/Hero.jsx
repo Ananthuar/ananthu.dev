@@ -19,15 +19,37 @@ export default function Hero() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-6 relative w-32 h-32 md:w-40 md:h-40 rounded-full glass p-1"
+                    className="mb-6 relative w-32 h-32 md:w-40 md:h-40 rounded-full p-[2px]"
+                    style={{
+                        background: "linear-gradient(135deg, rgba(167,139,250,0.5), rgba(255,255,255,0.05), rgba(167,139,250,0.3))"
+                    }}
                 >
-                    {/* Subtle floating effect for image placeholder */}
+                    {/* Floating profile photo */}
                     <motion.div
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                        className="w-full h-full rounded-full bg-gradient-to-tr from-accent/40 to-zinc-800 flex items-center justify-center overflow-hidden"
+                        className="w-full h-full rounded-full bg-zinc-900 overflow-hidden"
                     >
-                        <span className="text-4xl">A</span>
+                        {PERSONAL_DATA.profilePhoto ? (
+                            <img
+                                src={PERSONAL_DATA.profilePhoto}
+                                alt={PERSONAL_DATA.name}
+                                className="w-full h-full object-cover object-center"
+                                onError={(e) => {
+                                    e.target.style.display = "none";
+                                    e.target.nextSibling.style.display = "flex";
+                                }}
+                            />
+                        ) : null}
+                        {/* Fallback initial */}
+                        <div
+                            className="w-full h-full bg-gradient-to-tr from-accent/40 to-zinc-800 items-center justify-center"
+                            style={{ display: PERSONAL_DATA.profilePhoto ? "none" : "flex" }}
+                        >
+                            <span className="text-4xl text-white/60">
+                                {PERSONAL_DATA.name?.charAt(0) ?? "A"}
+                            </span>
+                        </div>
                     </motion.div>
                 </motion.div>
 

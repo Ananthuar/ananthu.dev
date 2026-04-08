@@ -1,6 +1,6 @@
 import { PERSONAL_DATA } from "../constants/data";
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Code2, Briefcase, Mail } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -38,13 +38,13 @@ export default function Contact() {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="mt-24 flex items-center justify-center gap-8"
                 >
-                    <a href={`https://${PERSONAL_DATA.contact.github}`} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors p-2">
-                        <Github className="w-6 h-6" />
+                    <a href={`https://${PERSONAL_DATA.contact.github}`} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors p-2 flex items-center gap-2">
+                        <Code2 className="w-6 h-6" />
                     </a>
-                    <a href={`https://${PERSONAL_DATA.contact.linkedin}`} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors p-2">
-                        <Linkedin className="w-6 h-6" />
+                    <a href={`https://${PERSONAL_DATA.contact.linkedin}`} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors p-2 flex items-center gap-2">
+                        <Briefcase className="w-6 h-6" />
                     </a>
-                    <a href={`mailto:${PERSONAL_DATA.contact.email}`} className="text-zinc-500 hover:text-white transition-colors p-2">
+                    <a href={`mailto:${PERSONAL_DATA.contact.email}`} className="text-zinc-500 hover:text-white transition-colors p-2 flex items-center gap-2">
                         <Mail className="w-6 h-6" />
                     </a>
                 </motion.div>
