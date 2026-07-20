@@ -104,15 +104,16 @@ export default function Hero() {
                     {PERSONAL_DATA.resume && (
                         <a
                             href={PERSONAL_DATA.resume}
-                            download
-                            className="group relative inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-medium text-sm overflow-hidden transition-transform hover:scale-105 active:scale-95"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-medium text-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.5)] active:scale-95"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                <polyline points="7 10 12 15 17 10" />
-                                <line x1="12" y1="15" x2="12" y2="3" />
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
                             </svg>
-                            Download Resume
+                            View Resume
                         </a>
                     )}
                     <a

@@ -10,24 +10,24 @@ import {
 
 export const PERSONAL_DATA = {
     name: "ANANTHU A R",
-    title: "AI/ML Developer & Computer Science Engineer",
+    title: "AI/ML/DL/NLP Developer & Computer Science Engineer",
     tagline: "Building intelligent systems for the future",
-    about: "I am a Computer Science student with a profound focus on Artificial Intelligence and Machine Learning. With strong fundamentals in problem-solving and full-stack development, I build intelligent, seamless systems that bridge the gap between complex algorithms and real-world impact. Every project I undertake is driven by a passion for elegance, efficiency, and future-forward innovation.",
+    about: "I am a Computer Science student with a profound focus on Artificial Intelligence, Machine Learning, Deep Learning, and Natural Language Processing. With strong fundamentals in problem-solving and full-stack development, I build intelligent, seamless systems that bridge the gap between complex algorithms and real-world impact. Every project I undertake is driven by a passion for elegance, efficiency, and future-forward innovation.",
     contact: {
         email: "ananthuar03@gmail.com",
         github: "https://github.com/Ananthuar",
         linkedin: "https://linkedin.com/in/ananthuar03",
         whatsapp: "https://wa.me/917025677058",
     },
-    resume: "/_ananthu_ar_resume_.pdf",
+    resume: "https://drive.google.com/file/d/1tk1l9Flq8oIW7TEv5QoWg8OyIC7UdNuR/view?usp=drivesdk",
     profilePhoto: "/profile.png",
     education: [
         {
             degree: "B.Tech in Computer Science & Engineering",
-            institution: "College of Engineering and Management Punnapra",
+            institution: "CAPE College Of Engineering Alappuzha",
             location: "Punnapra, Kerala",
-            duration: "2022 – 2026",
-            description: "Specialising in Artificial Intelligence and Machine Learning. Actively building real-world systems across robotics, mobile, and web engineering domains."
+            duration: "2022 – 2027",
+            description: "Specialising in Artificial Intelligence, Machine Learning, Deep Learning, and NLP. Actively building real-world systems across robotics, mobile, and web engineering domains."
         },
         {
             degree: "Diploma in Computer Engineering",
@@ -60,7 +60,7 @@ export const PERSONAL_DATA = {
         { name: "Flutter", icon: Smartphone },
         { name: "HTML/CSS", icon: Globe },
         { name: "Firebase", icon: Database },
-        { name: "AI/ML", icon: BrainCircuit },
+        { name: "AI, ML, DL & NLP", icon: BrainCircuit },
         { name: "Data Structures", icon: Bot },
     ],
     projects: [
